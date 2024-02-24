@@ -13,6 +13,7 @@ import java.util.Set; // É usado para garantir que não haja repetição de nú
 public class GerarDados {
     private int quantidadeNumeros;
     private int[] numeros;
+    private int comecaEmQualNumero = 0;
 
     public GerarDados(int quantidadeNumeros) {
         this.quantidadeNumeros = quantidadeNumeros;
@@ -20,20 +21,20 @@ public class GerarDados {
     }
 
     private void gerarNumerosOrdenados() {
-        for (int i = 0; i < quantidadeNumeros; i++) {
+        for (int i = comecaEmQualNumero; i < quantidadeNumeros; i++) {
             numeros[i] = i;
         }
     }
 
     private void gerarNumerosOrdenadosInvertidos() {
-        for (int i = 0; i < quantidadeNumeros; i++) {
+        for (int i = comecaEmQualNumero; i < quantidadeNumeros; i++) {
             numeros[i] = quantidadeNumeros - i;
         }
     }
 
     private void gerarNumerosAleatorios() {
         Set<Integer> numerosGerados = new HashSet<>();
-        for (int i = 0; i < quantidadeNumeros; i++) {
+        for (int i = comecaEmQualNumero; i < quantidadeNumeros; i++) {
             int numero;
             do {
                 numero = (int) (Math.random() * quantidadeNumeros);
@@ -45,7 +46,7 @@ public class GerarDados {
 
     private void escreverNumerosArquivo(String nomeArquivo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
-            for (int i = 0; i < quantidadeNumeros; i++) {
+            for (int i = comecaEmQualNumero; i < quantidadeNumeros; i++) {
                 writer.write(Integer.toString(numeros[i]));
                 writer.newLine();
             }
@@ -69,7 +70,7 @@ public class GerarDados {
     public static void main(String[] args) {
         System.out.println("Gerando números...");
 
-        GerarDados gerador = new GerarDados(1000000);
+        GerarDados gerador = new GerarDados(10001);
 
         gerador.CreateFolder("data");
 
