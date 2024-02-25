@@ -4,8 +4,6 @@ import com.example.LerArquivo;
 
 public class BubbleSort {
     public static void bubbleSort(int[] numeros) {
-        long tempoInicial = System.currentTimeMillis();
-        long tempoFinal = 0;
 
         int tamanhoVetor = numeros.length;
         int trocas = 0;
@@ -26,9 +24,6 @@ public class BubbleSort {
         System.out.println("\nNúmeros ordenados com sucesso!");
         System.out.println("\nQuantidade de comparações: " + comparacoes);
         System.out.println("\nQuantidade de Trocas: " + trocas);
-
-        tempoFinal = System.currentTimeMillis();
-        System.out.println("\nTempo de execução: " + (tempoFinal - tempoInicial) + " ms");
     }
 
     public static void main(String[] args) {

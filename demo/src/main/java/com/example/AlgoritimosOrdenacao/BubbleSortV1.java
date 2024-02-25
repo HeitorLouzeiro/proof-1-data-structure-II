@@ -2,7 +2,7 @@ package com.example.AlgoritimosOrdenacao;
 
 import com.example.LerArquivo;
 
-public class BublleSortV1 {
+public class BubbleSortV1 {
     public static void bubbleSortV1(int[] numeros) {
         int tamanhoVetor = numeros.length;
         int trocas = 0;
