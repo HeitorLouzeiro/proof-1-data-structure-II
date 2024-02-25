@@ -70,7 +70,7 @@ public class GerarDados {
     public static void main(String[] args) {
         System.out.println("Gerando números...");
 
-        GerarDados gerador = new GerarDados(10001);
+        GerarDados gerador = new GerarDados(10000);
 
         gerador.CreateFolder("data");
 
