@@ -97,7 +97,7 @@ public class BenchmarkRunner {
                         "-f", Integer.toString(quantidadeMedicao),
                                 ".*BenchmarkSelectSortAleatorio.*"
                 });
-        */
+        
 
 
                 org.openjdk.jmh.Main.main(new String[] {
@@ -119,6 +119,29 @@ public class BenchmarkRunner {
                         "-wi", Integer.toString(quantidadeWarmup),
                         "-f", Integer.toString(quantidadeMedicao),
                                 ".*BenchmarkMergeSortAleatorio.*"
+                });
+        */
+
+                org.openjdk.jmh.Main.main(new String[] {
+                        "-i", Integer.toString(quantidadeTestes),
+                        "-wi", Integer.toString(quantidadeWarmup),
+                        "-f", Integer.toString(quantidadeMedicao),
+                                ".*BenchmarkQuickSortOrdenados.*"
+                });
+                org.openjdk.jmh.Main.main(new String[] {
+                        "-i", Integer.toString(quantidadeTestes),
+                        "-wi", Integer.toString(quantidadeWarmup),
+                        "-f", Integer.toString(quantidadeMedicao),
+                        ".*BenchmarkQuickSortInvertido.*"
+                });
+        
+                
+                 
+                org.openjdk.jmh.Main.main(new String[] {
+                        "-i", Integer.toString(quantidadeTestes),
+                        "-wi", Integer.toString(quantidadeWarmup),
+                        "-f", Integer.toString(quantidadeMedicao),
+                                ".*BenchmarkQuickSortAleatorio.*"
                 });
         }
 }
