@@ -1,8 +1,10 @@
 package com.example.Benchmark;
 
+import org.openjdk.jmh.Main;
+
 public class BenchmarkRunner {
         public static void main(String[] args) throws Exception {
-                //org.openjdk.jmh.Main.main(args);
+                // org.openjdk.jmh.Main.main(args);
 
                 /*
                  * -i 1: Quantas vezes será executado o teste.
@@ -13,156 +15,21 @@ public class BenchmarkRunner {
                 int quantidadeTestes = 1;
                 int quantidadeWarmup = 2;
                 int quantidadeMedicao = 1;
-/*
-                org.openjdk.jmh.Main.main(new String[] {
-                                "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortOrdenados.*"
-                });
 
-                org.openjdk.jmh.Main.main(new String[] {
-                                "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortInvertido.*"
-                });
+                String[] benchmarkClasses = {
+                                ".*BenchmarkBubbleSortOrdenados.bubbleSort.*",
+                                ".*BenchmarkBubbleSortInvertido.bubbleSort.*",
+                                ".*BenchmarkBubbleSortAleatorio.bubbleSort.*",
 
-                org.openjdk.jmh.Main.main(new String[] {
-                                "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortAleatorio.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                                "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortOrdenadosV1.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                                "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortInvertidoV1.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                                "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortAleatorioV1.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                                   "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortOrdenadosV2.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                                  "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortInvertidoV2.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                                 "-i", Integer.toString(quantidadeTestes),
-                                "-wi", Integer.toString(quantidadeWarmup),
-                                "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkBubbleSortAleatorioV2.*"
-                });
- 
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkSelectSortOrdenados.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkSelectSortInvertido.*"
-                });
-                
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkSelectSortAleatorio.*"
-                });
-        
-
-
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkMergeSortOrdenados.*"
-                });
-
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkMergeSortInvertido.*"
-                });
-                
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                                ".*BenchmarkMergeSortAleatorio.*"
-                });
-                
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                        ".*BenchmarkQuickSortOrdenados.*"
-                });
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                        ".*BenchmarkQuickSortInvertido.*"
-                });
-        
-                
-                
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                        ".*BenchmarkQuickSortAleatorio.*"
-                });
-                */
-
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                        ".*BenchmarkHeapSortOrdenados.*"
-                }); 
-                
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                        ".*BenchmarkHeapSortInvertido.*"
-                });
-                
-                org.openjdk.jmh.Main.main(new String[] {
-                        "-i", Integer.toString(quantidadeTestes),
-                        "-wi", Integer.toString(quantidadeWarmup),
-                        "-f", Integer.toString(quantidadeMedicao),
-                        ".*BenchmarkHeapSortAleatorio.*"
-                });
+                                // Adicione outras classes de benchmark aqui...
+                };
+                for (String benchmarkClass : benchmarkClasses) {
+                        Main.main(new String[] {
+                                        "-i", Integer.toString(quantidadeTestes),
+                                        "-wi", Integer.toString(quantidadeWarmup),
+                                        "-f", Integer.toString(quantidadeMedicao),
+                                        benchmarkClass
+                        });
+                }
         }
 }
