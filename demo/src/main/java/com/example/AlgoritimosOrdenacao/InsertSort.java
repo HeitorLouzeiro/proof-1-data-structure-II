@@ -27,7 +27,7 @@ public class InsertSort {
     public static void main(String[] args) {
         LerArquivo lerArquivo = new LerArquivo();
 
-        System.out.println("############# Bubble Sort ###################");
+        System.out.println("############# InsertSort Sort ###################");
 
         System.out.println("---------------------Lendo arquivos com números ordenados---------------------");
 
