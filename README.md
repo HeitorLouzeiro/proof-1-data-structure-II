@@ -1,3 +1,5 @@
+# Implementação e Análise de Desempenho de Algoritmos de Ordenação
+
 Este projeto consiste na implementação e análise de desempenho de algoritmos de ordenação. Os algoritmos implementados são:
 
 - Bubble Sort
@@ -59,7 +61,7 @@ Os algoritmos de ordenação foram testados e as seguintes métricas foram colet
 - Número de trocas realizadas
 - Tempo total de execução em segundos
 
-Os resultados obtidos foram organizados em tabelas e gráficos para facilitar a análise comparativa. A seguir, apresentamos os resultados obtidos para cada algoritmo de ordenação.
+Os resultados obtidos foram organizados em tabelas para facilitar a análise comparativa. A seguir, apresentamos os resultados obtidos para cada algoritmo de ordenação.
 
 ### Bubble Sort
 
