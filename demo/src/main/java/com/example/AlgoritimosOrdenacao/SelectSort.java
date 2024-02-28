@@ -5,8 +5,8 @@ import com.example.LerArquivo;
 public class SelectSort {
     public static void selectSort(int[] numeros) {
         int tamanhoVetor = numeros.length;
-        int trocas = 0;
-        int comparacoes = 0;
+        long trocas = 0;
+        long comparacoes = 0;
 
         int i, j, numeroSelecionado, menorNumero, posicaoMenorNumero;
 

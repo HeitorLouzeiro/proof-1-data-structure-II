@@ -6,8 +6,8 @@ public class BubbleSortV2 {
     public static void bubbleSortV2(int[] numeros) {
         int tamanhoVetor = numeros.length;
         boolean trocas = true;
-        int numeroTrocas = 0;
-        int comparacoes = 0;
+        long numeroTrocas = 0;
+        long comparacoes = 0;
 
         int numero = 1;
         while (numero <= tamanhoVetor && trocas == true) {

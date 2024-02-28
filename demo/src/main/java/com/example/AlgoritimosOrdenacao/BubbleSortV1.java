@@ -5,8 +5,8 @@ import com.example.LerArquivo;
 public class BubbleSortV1 {
     public static void bubbleSortV1(int[] numeros) {
         int tamanhoVetor = numeros.length;
-        int trocas = 0;
-        int comparacoes = 0;
+        long trocas = 0;
+        long comparacoes = 0;
 
         int j, i, temp;
         for (j = 1; j <= tamanhoVetor - 1; j++) {

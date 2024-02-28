@@ -31,7 +31,7 @@ public class BenchmarkRunner {
                 benchmarkClasses.put(".*BenchmarkHeapSortOrdenados.*", false);
 
                 // Benchmark numeros invertidos
-                benchmarkClasses.put(".*BenchmarkBubbleSortInvertido.bubbleSort.*", true);
+                benchmarkClasses.put(".*BenchmarkBubbleSortInvertido.bubbleSort.*", false);
                 benchmarkClasses.put(".*BenchmarkBubbleSortInvertidoV1.*", false);
                 benchmarkClasses.put(".*BenchmarkBubbleSortInvertidoV2.*", false);
                 benchmarkClasses.put(".*BenchmarkSelectSortInvertido.*", false);
@@ -40,7 +40,7 @@ public class BenchmarkRunner {
                 benchmarkClasses.put(".*BenchmarkHeapSortInvertido.*", false);
 
                 // Benchmark numeros aleatorios
-                benchmarkClasses.put(".*BenchmarkBubbleSortAleatorio.bubbleSort.*", true);
+                benchmarkClasses.put(".*BenchmarkBubbleSortAleatorio.bubbleSort.*", false);
                 benchmarkClasses.put(".*BenchmarkBubbleSortAleatorioV1.*", false);
                 benchmarkClasses.put(".*BenchmarkBubbleSortAleatorioV2.*", false);
                 benchmarkClasses.put(".*BenchmarkSelectSortAleatorio.*", false);
@@ -58,7 +58,7 @@ public class BenchmarkRunner {
                  * padrão.
                  */
 
-                //org.openjdk.jmh.Main.main(args);
+                org.openjdk.jmh.Main.main(args);
 
                 /*
                  * -i 1: Quantas vezes será executado o teste.
@@ -67,22 +67,22 @@ public class BenchmarkRunner {
                  */
 
                 // Executa o benchmark com as configurações personalizadas
+/* 
+                int quantidadeTestes = 1;
+                 int quantidadeWarmup = 2;
+                 int quantidadeMedicao = 1;
 
-               int quantidadeTestes = 1;
-                int quantidadeWarmup = 2;
-                int quantidadeMedicao = 1;
-
-                for (Map.Entry<String, Boolean> entry : benchmarkClasses.entrySet()) {
-                        if (entry.getValue()) {
-                                Main.main(new String[] {
-                                                "-i", Integer.toString(quantidadeTestes),
-                                                "-wi", Integer.toString(quantidadeWarmup),
-                                                "-f", Integer.toString(quantidadeMedicao),
-                                                entry.getKey()
-                                });
-                        }
-                }
-
+                 for (Map.Entry<String, Boolean> entry : benchmarkClasses.entrySet()) {
+                         if (entry.getValue()) {
+                                 Main.main(new String[] {
+                                                 "-i", Integer.toString(quantidadeTestes),
+                                                 "-wi", Integer.toString(quantidadeWarmup),
+                                                 "-f", Integer.toString(quantidadeMedicao),
+                                                 entry.getKey()
+                                 });
+                         }
+                 } 
+  */
                 // Fim do benchmark com as configurações personalizadas
 
         }

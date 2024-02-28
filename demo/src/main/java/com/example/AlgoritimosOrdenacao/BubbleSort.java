@@ -6,8 +6,8 @@ public class BubbleSort {
     public static void bubbleSort(int[] numeros) {
 
         int tamanhoVetor = numeros.length;
-        int trocas = 0;
-        int comparacoes = 0;
+        long trocas = 0;
+        long comparacoes = 0;
 
         for (int i = 1; i <= tamanhoVetor; i++) {
             for (int j = 0; j < tamanhoVetor - 1; j++) {

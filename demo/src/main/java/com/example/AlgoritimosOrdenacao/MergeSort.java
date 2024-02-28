@@ -3,8 +3,8 @@ package com.example.AlgoritimosOrdenacao;
 import com.example.LerArquivo;
 
 public class MergeSort {
-    private static int comparacoes = 0;
-    private static int trocas = 0;
+    private static long comparacoes = 0;
+    private static long trocas = 0;
 
     public static void resetContadores() {
         comparacoes =  0;
