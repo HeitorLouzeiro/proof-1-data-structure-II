@@ -56,11 +56,11 @@ public class GerarDados {
         }
     }
 
-    private void CreateFolder(String folderName) {
-        File dataFolder = new File(folderName);
-        if (!dataFolder.exists()) {
-            boolean created = dataFolder.mkdirs();
-            if (!created) {
+    private void CriarPasta(String pastaNome) {
+        File pasta = new File(pastaNome);
+        if (!pasta.exists()) {
+            boolean criada = pasta.mkdirs();
+            if (!criada) {
                 System.out.println("Falha ao criar a pasta 'data'.");
                 return;
             }
@@ -70,9 +70,9 @@ public class GerarDados {
     public static void main(String[] args) {
         System.out.println("Gerando números...");
 
-        GerarDados gerador = new GerarDados(10000);
+        GerarDados gerador = new GerarDados(1000000);
 
-        gerador.CreateFolder("data");
+        gerador.CriarPasta("data");
 
         gerador.gerarNumerosOrdenados();
         gerador.escreverNumerosArquivo("data/numerosOrdenados.txt");

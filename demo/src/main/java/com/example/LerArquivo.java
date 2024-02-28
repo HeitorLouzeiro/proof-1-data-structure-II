@@ -6,14 +6,14 @@ import java.io.IOException;
 
 public class LerArquivo {
     public int[] lerArquivo(String nomeArquivo) {
-        int[] numeros = new int[10000];
+        int[] numeros = new int[1000000];
 
         System.out.println("Lendo números do arquivo...");
 
         try (BufferedReader reader = new BufferedReader(new FileReader(nomeArquivo))) {
             String linha;
             int i = 0;
-            while ((linha = reader.readLine()) != null && i < 10000) {
+            while ((linha = reader.readLine()) != null && i < 1000000) {
                 //System.out.println(linha);
                 numeros[i] = Integer.parseInt(linha);
                 i++;
