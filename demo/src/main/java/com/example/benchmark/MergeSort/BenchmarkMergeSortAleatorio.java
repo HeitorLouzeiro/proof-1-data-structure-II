@@ -17,7 +17,7 @@ public class BenchmarkMergeSortAleatorio {
     @Warmup(iterations = 2) // Quantas vezes será executado antes de começar a medir o tempo.
     @Measurement(iterations = 1) // Quantas vezes será executado o teste.
     /*
-     * Método para executar o BubbleSort com números ordenados
+     * Método para executar o MergeSort com números ordenados
      * Será executado pelo JMH
      * Com 2 warmups que é as iterações de aquecimento
      * Com 1 medição
